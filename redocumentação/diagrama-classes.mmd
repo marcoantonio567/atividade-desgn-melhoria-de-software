@@ -1,0 +1,31 @@
+classDiagram
+    class PedidoProcessor {
+        -List<string> _logs
+        +string ProcessarPedido(
+            int pedidoId,
+            string nomeCliente,
+            string emailCliente,
+            string tipoCliente,
+            List<ItemPedido> itens,
+            string cupom,
+            string formaPagamento,
+            string enderecoEntrega,
+            double pesoTotal,
+            bool entregaExpressa,
+            bool clienteBloqueado,
+            bool enviarEmail,
+            bool salvarLog,
+            string pais,
+            int parcelas
+        )
+        +List<string> ObterLogs()
+    }
+
+    class ItemPedido {
+        +string Nome
+        +string Categoria
+        +int Quantidade
+        +double PrecoUnitario
+    }
+
+    PedidoProcessor --> ItemPedido : processa

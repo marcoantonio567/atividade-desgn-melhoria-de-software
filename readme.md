@@ -1,27 +1,38 @@
-# Atividade de Engenharia Reversa e Refatoração
+# Reverse Engineering and Refactoring Activity
 
-## Objetivo
-Realizar a engenharia reversa do código legado disponibilizado no repositório da atividade, identificando responsabilidades, regras de negócio implícitas, significado dos parâmetros, oportunidades de redocumentação e propostas de reestruturação.
+## Objective
+To reverse engineer the legacy code available in the activity repository, identifying responsibilities, implicit business rules, parameter meanings, redocumentation opportunities, and restructuring proposals.
 
-## Parte 01 - Reverse Engineering
-A classe analisada foi `PedidoProcessor`, responsável pelo processamento de pedidos. Durante a análise foi identificado que a classe não apenas processa pedidos, mas também realiza:
-- validações de entrada;
-- cálculo de subtotal;
-- aplicação de descontos;
-- cálculo de frete nacional e internacional;
-- cálculo de juros por parcelamento;
-- geração de alertas;
-- envio de email;
-- persistência de logs.
+## Part 01 - Reverse Engineering
+The analyzed class was `PedidoProcessor`, responsible for processing orders. During the analysis, it was identified that the class not only processes orders but also performs:
 
-## Parte 02 - Redocumentação
-Foi realizada:
-- melhoria dos nomes de variáveis, métodos e classe;
-- inserção de comentários explicativos no código original;
-- elaboração de diagrama de classes representando o domínio existente.
+- input validations;
 
-## Parte 03 - Reestruturação
-Foi proposta a separação das responsabilidades em componentes específicos, reduzindo o acoplamento e aumentando a clareza lógica do sistema. A principal melhoria sugerida foi a criação de serviços especializados para validação, cálculo, notificação e logging.
+- subtotal calculation;
 
-## Conclusão
-A análise evidenciou que o sistema legado possui baixa coesão e excesso de responsabilidades centralizadas. A refatoração proposta melhora legibilidade, manutenção, testabilidade e evolução futura do software.
+- application of discounts;
+
+- calculation of national and international freight;
+
+- calculation of interest for installments;
+
+- generation of alerts;
+
+- sending emails;
+
+- persistence of logs.
+
+## Part 02 - Redocumentation
+The following was performed:
+
+- improvement of variable, method, and class names;
+
+- insertion of explanatory comments in the original code;
+
+- creation of a class diagram representing the existing domain.
+
+## Part 3 - Restructuring
+The separation of responsibilities into specific components was proposed, reducing coupling and increasing the logical clarity of the system. The main improvement suggested was the creation of specialized services for validation, calculation, notification, and logging.
+
+## Conclusion
+The analysis showed that the legacy system has low cohesion and an excess of centralized responsibilities. The proposed refactoring improves readability, maintainability, testability, and future evolution of the software.
